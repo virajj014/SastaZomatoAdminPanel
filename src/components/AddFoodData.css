@@ -1,0 +1,65 @@
+.form-outer {
+    width: 70%;
+    /* background-color: aqua; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+.form-outer .form-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.form-inner input,
+.form-inner select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+
+.form-inner label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-inner button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* background-color: #4caf50; */
+}
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 45%;
+}
