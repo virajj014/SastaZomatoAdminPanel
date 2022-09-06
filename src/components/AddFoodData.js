@@ -63,7 +63,8 @@ const AddFoodData = () => {
                                 restrauntAddressBuilding,
                                 restrauntAddressStreet,
                                 restrauntAddressCity,
-                                reatrauntAddressPincode
+                                reatrauntAddressPincode,
+                                id: new Date().getTime().toString()
                             }
 
                             // console.log(foodData)
@@ -184,7 +185,7 @@ const AddFoodData = () => {
 
                 <div class="form-row">
                     <div class="form-col">
-                        <label>Restaurant City</label>
+                        <label>Restaurant City Pincode</label>
                         <input type="text" name="restaurant_address_city"
                             onChange={(e) => { setRestrauntAddressCity(e.target.value) }}
                         />
