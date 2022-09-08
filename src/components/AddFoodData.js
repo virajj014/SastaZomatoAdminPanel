@@ -12,20 +12,22 @@ const AddFoodData = () => {
     const [foodCategory, setFoodCategory] = useState('')
     const [foodDescription, setFoodDescription] = useState('')
     const [restaurantName, setRestaurantName] = useState('')
-    // remove restraunt address 
+    // const [restaurantAddress, setRestaurantAddress] = useState('')
+    const [restaurantPhone, setRestaurantPhone] = useState('')
     const [foodImageUrl, setFoodImageUrl] = useState('')
+
+
     //
     const [foodType, setFoodType] = useState('')
     const [mealType, setMealType] = useState('')
     const [foodAddon, setFoodAddon] = useState('')
     const [foodAddonPrice, setFoodAddonPrice] = useState('')
-    //
-    const [restaurantPhone, setRestaurantPhone] = useState('')
     const [restaurantEmail, setRestaurantEmail] = useState('')
     const [restrauntAddressBuilding, setRestrauntAddressBuilding] = useState('')
     const [restrauntAddressStreet, setRestrauntAddressStreet] = useState('')
     const [restrauntAddressCity, setRestrauntAddressCity] = useState('')
     const [reatrauntAddressPincode, setRestrauntAddressPincode] = useState('')
+
     // console.log(foodName, foodPrice, foodImage, foodCategory, foodDescription, restaurantName, restaurantAddress, restaurantPhone)
 
     const handleSubmit = (e) => {
@@ -55,6 +57,7 @@ const AddFoodData = () => {
                                 restaurantName,
                                 // restaurantAddress,
                                 restaurantPhone,
+                                //
                                 foodType,
                                 mealType,
                                 foodAddon,
@@ -84,6 +87,8 @@ const AddFoodData = () => {
 
     }
 
+
+    // console.log(new Date().getTime().toString())
     return (
         <div className="form-outer">
             <h1>Add Food Data</h1>
@@ -95,9 +100,14 @@ const AddFoodData = () => {
                 <label>Food Description</label>
                 <input type="text" name="food_description"
                     onChange={(e) => { setFoodDescription(e.target.value) }} />
-
                 <br />
-                <div className='form-row'>
+
+                {/*                            */}
+                {/*  */}
+                {/*  */}
+
+
+                <div className="form-row">
                     <div className="form-col">
                         <label>Food Price</label>
                         <input type="number" name="food_price"
@@ -106,6 +116,7 @@ const AddFoodData = () => {
                     </div>
                     <div className="form-col">
                         <label>Food Type</label>
+
                         <select name="food_type" onChange={(e) => { setFoodType(e.target.value) }}>
                             <option value="null">Select Food Type</option>
                             <option value="veg">Veg</option>
@@ -113,22 +124,21 @@ const AddFoodData = () => {
                         </select>
                     </div>
                 </div>
-                <br />
-
                 <div className="form-row">
                     <div className="form-col">
                         <label>Food Category</label>
                         <select name="food_category" onChange={(e) => { setFoodCategory(e.target.value) }}>
                             <option value="null">Select Food Category</option>
-                            <option value="indian">Indian</option>
-                            <option value="chineese">Chineese</option>
-                            <option value="italian">Italian</option>
-                            <option value="mexican">Mexican</option>
-                            <option value="american">American</option>
+                            <option value="veg">Indian</option>
+                            <option value="non-veg">Chineese</option>
+                            <option value="non-veg">Italian</option>
+                            <option value="non-veg">Mexican</option>
+                            <option value="non-veg">American</option>
                         </select>
                     </div>
                     <div className="form-col">
                         <label>Meal Type</label>
+
                         <select name="meal_type" onChange={(e) => { setMealType(e.target.value) }}>
                             <option value="null">Select Meal Type</option>
                             <option value="dinner">Dinner</option>
@@ -138,12 +148,10 @@ const AddFoodData = () => {
                         </select>
                     </div>
                 </div>
-
-
                 <br />
                 <div class="form-row">
                     <div class="form-col">
-                        <label>Add On Name</label>
+                        <label>Add On</label>
                         <input type="text" name="food_addon"
                             onChange={(e) => { setFoodAddon(e.target.value) }}
                         />
@@ -156,7 +164,9 @@ const AddFoodData = () => {
                     </div>
                 </div>
                 <br />
-
+                {/*  */}
+                {/*  */}
+                {/*                                          */}
                 <label>Food Image</label>
                 <input type="file" name="food_image"
                     onChange={(e) => { setFoodImage(e.target.files[0]) }}
@@ -182,10 +192,9 @@ const AddFoodData = () => {
                     </div>
                 </div>
 
-
                 <div class="form-row">
                     <div class="form-col">
-                        <label>Restaurant City Pincode</label>
+                        <label>Restaurant City</label>
                         <input type="text" name="restaurant_address_city"
                             onChange={(e) => { setRestrauntAddressCity(e.target.value) }}
                         />
@@ -212,8 +221,7 @@ const AddFoodData = () => {
                         />
                     </div>
                 </div>
-
-
+                <br />
                 <button onClick={handleSubmit}>Add Food</button>
             </form>
         </div>
