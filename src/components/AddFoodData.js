@@ -4,7 +4,7 @@ import './AddFoodData.css'
 import { db, storage } from '../Firebase/FirebaseConfig'
 import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import Navbar from './Navbar/Navbar';
+import Navbar from './Navbar';
 //
 const AddFoodData = () => {
     const [foodName, setFoodName] = useState('')
@@ -91,7 +91,7 @@ const AddFoodData = () => {
 
     // console.log(new Date().getTime().toString())
     return (
-        <div>
+        <div className="food-outermost">
             <Navbar />
             <div className="form-outer">
                 <h1>Add Food Data</h1>
@@ -111,6 +111,7 @@ const AddFoodData = () => {
 
 
                     <div className="form-row">
+
                         <div className="form-col">
                             <label>Food Price</label>
                             <input type="number" name="food_price"

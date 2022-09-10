@@ -1,0 +1,33 @@
+.navbar {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 4rem;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 20%;
+}
+
+
+.nav-right p {
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
